@@ -10,6 +10,9 @@ plugins {
     application
 }
 
+group = "playlang"
+version = "0.0.1-SNAPSHOT"
+
 repositories {
     // Use Maven Central for resolving dependencies.
     mavenCentral()
