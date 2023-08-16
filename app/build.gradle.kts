@@ -26,6 +26,9 @@ dependencies {
 
     // This dependency is used by the application.
     implementation("com.google.guava:guava:31.1-jre")
+
+    implementation("org.hibernate.orm:hibernate-core:6.2.7.Final")
+    implementation("com.h2database:h2:2.2.220")
 }
 
 // Apply a specific Java toolchain to ease working on different environments.

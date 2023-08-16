@@ -4,6 +4,7 @@
 package playlang;
 
 import java.util.Arrays;
+import java.util.logging.Level;
 
 public class App {
     public String getGreeting() {
@@ -11,7 +12,13 @@ public class App {
     }
 
     public static void main(String[] args) {
+        java.util.logging.Logger.getLogger("org.hibernate").setLevel(Level.OFF);
         System.out.println(new App().getGreeting());
-	Arrays.stream(args).forEach(System.out::println);
+	    Arrays.stream(args).forEach(System.out::println);
+
+        if (args.length > 0 && "init".equals(args[0])) {
+            HibernateDemo hibernateDemo = new HibernateDemo();
+            hibernateDemo.run();
+        }
     }
 }
